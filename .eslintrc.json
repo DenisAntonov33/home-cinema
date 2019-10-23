@@ -1,0 +1,9 @@
+{
+  "plugins": ["angular"],
+  "rules": {
+    "angular/controller_name": 0
+  },
+  "compilerOptions": {
+    "experimentalDecorators": true
+  }
+}
