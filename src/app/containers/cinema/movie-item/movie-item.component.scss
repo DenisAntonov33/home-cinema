@@ -1,0 +1,66 @@
+@import '~src/assets/styles/index.scss';
+
+.movie-item {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  height: 278px;
+  margin-bottom: 16px;
+  width: 100%;
+  &__img-wrapper {
+    background-color: coral;
+    flex: 0 0 33%;
+    height: auto;
+    min-height: 100%;
+    max-height: 100%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  &__header {
+    display: flex;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 25px;  
+  }
+  &__footer {
+    align-items: center;
+    border-top: 1px solid #e3e3e3;
+    display: flex;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__body {
+    flex: 1;
+    font-size: .9rem;
+    padding-left: 16px;
+    padding-right: 25px; 
+  }
+  &__rating {
+    background-color: pink;
+    height: 38px;
+    width: 38px;
+  }
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+  &__title {
+    color: $black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+  }
+  &__date {
+    color: transparentize($black, .4);
+    line-height: 1rem;
+  }
+  &__link {
+    color: $black;
+    font-size: 0.9rem;
+  }
+}

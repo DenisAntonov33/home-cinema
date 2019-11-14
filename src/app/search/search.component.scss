@@ -1,0 +1,23 @@
+.search {
+  display: flex;
+  align-items: center;
+  height: 47px;
+  position: relative;
+  &::before {
+    content: '';
+    font-family: "Glyphicons Regular";
+    height: 20px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 20px;
+  }
+  &__input {
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+}
