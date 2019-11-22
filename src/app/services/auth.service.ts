@@ -30,4 +30,9 @@ export class AuthService {
         return r;
       }));
   }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.currentTokenSubject.next(null);
+  }
 }

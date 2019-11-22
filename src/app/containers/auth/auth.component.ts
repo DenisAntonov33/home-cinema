@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -8,14 +9,11 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(protected auth: AuthService) { }
+  constructor(protected auth: AuthService, private router: Router) { }
 
   login() {
-    this.auth.login().subscribe(r => {
-      console.log('r1 :', r);
-    });
-
-    console.log('this.auth.token :', this.auth.token);
+    this.auth.login().subscribe();
+    this.router.navigate(['/personal']);
   }
 
   ngOnInit() {
