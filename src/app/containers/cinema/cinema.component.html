@@ -10,7 +10,7 @@
       <!-- <div class="col-md-6" *ngFor="let movie of movies$">
         <app-movie-item></app-movie-item>
       </div> -->
-      <div class="col-md-6">
+      <div class="col-md-6" *ngFor="let item of movies$ | async">
         <app-movie-item></app-movie-item>
       </div>
       <div class="col-md-6">

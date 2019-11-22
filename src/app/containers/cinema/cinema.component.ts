@@ -14,10 +14,10 @@ import { getInitialState } from '../../store/state/app.state';
   styleUrls: ['./cinema.component.scss']
 })
 export class CinemaComponent implements OnInit {
-  movies$: IMovieItem[];
+  movies$: Observable<IMovieItem[]>;
 
   constructor(private store: Store<IAppState>) {
-    this.store.pipe(select(selectMoviesList)).subscribe(v => this.movies$ = v);
+    this.movies$ = this.store.pipe(select(selectMoviesList));
     console.log('this.movies$ :', this.movies$);
     console.log('this._store.select() :', this.store.select(selectMoviesList));
 
