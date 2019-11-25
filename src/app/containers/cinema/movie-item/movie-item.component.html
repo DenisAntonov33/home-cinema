@@ -1,7 +1,11 @@
 <div class="movie-item">
   <div class="movie-item__img-wrapper">
     <a routerLink="/cinema" class="movie-item__img-link">
-      <img src="" alt="" class="movie-item__img-wrapper" />
+      <img
+        [src]="'https://image.tmdb.org/t/p/w185_and_h278_bestv2/' + movieItem.poster_path"
+        alt=""
+        class="movie-item__img-wrapper"
+      />
     </a>
   </div>
 
@@ -9,14 +13,13 @@
     <div class="movie-item__header">
       <div class="rating movie-item__rating"></div>
       <div class="movie-item__title-wrapper">
-        <a routerLink="/cinema" class="movie-item__title">Joker</a>
-        <span class="movie-item__date">October 4, 2019</span>
+        <a routerLink="/cinema" class="movie-item__title">{{ movieItem.title }}</a>
+        <span (click)='test()' class="movie-item__date">{{releaseDate() | date:'longDate'}}</span>
       </div>
     </div>
     <div class="movie-item__body">
-      During the 1980s, a failed stand-up comedian is driven insane and turns to
-      a life of crime and chaos in Gotham City while becoming an infamous
-      psychopathic crime figure.
+      During the 1980s, a failed stand-up comedian is driven insane and turns to a life of
+      crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.
     </div>
     <div class="movie-item__footer">
       <a routerLink="/cinema" class="movie-item__link">More Info</a>

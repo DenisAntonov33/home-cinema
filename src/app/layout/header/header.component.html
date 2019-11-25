@@ -39,11 +39,14 @@
         </nav>
         <nav class="navbar navbar_main navbar-expand-lg">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a routerLink="{{isAuthorized ? '/personal' : '/login'}}" class="nav-link">Login</a>
+            <li *ngIf="!auth.token" class="nav-item active">
+              <a routerLink="/login" class="nav-link">Login</a>
             </li>
             <li class="nav-item">
               <a routerLink="/announce" class="nav-link">Sign Up</a>
+            </li>
+            <li *ngIf="auth.token"  class="nav-item nav-item_personal">
+              <a routerLink="/personal" class="nav-link nav-link_personal">u</a>
             </li>
           </ul>
         </nav>

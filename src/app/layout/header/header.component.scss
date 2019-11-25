@@ -19,6 +19,9 @@
 .nav-item {
   display: flex;
   align-items: center;
+  &_personal {
+    margin-left: 10px;
+  }
 }
 
 .navbar {
@@ -38,6 +41,16 @@
     .nav-link {
       color: #fff;
       text-transform: uppercase;
+      &_personal {
+        background-color: #d40242;
+        border-radius: 50%;
+        display: block;
+        font-weight: bold;
+        height: 32px;
+        line-height: 18px;
+        text-align: center;
+        width: 32px;
+      }
     }
   }
 }

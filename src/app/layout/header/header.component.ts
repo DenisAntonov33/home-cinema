@@ -10,8 +10,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(protected auth: AuthService) { }
 
-  isAuthorized = Boolean(this.auth.token);
-
   ngOnInit() {
   }
 

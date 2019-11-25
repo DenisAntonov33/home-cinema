@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personal',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logOut() {
+    this.auth.logout();
+    this.router.navigate(['']);
+
   }
 
 }

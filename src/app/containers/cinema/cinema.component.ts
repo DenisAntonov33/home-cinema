@@ -19,7 +19,7 @@ export class CinemaComponent implements OnInit {
   constructor(private store: Store<IAppState>) {
     this.movies$ = this.store.pipe(select(selectMoviesList));
     console.log('this.movies$ :', this.movies$);
-    console.log('this._store.select() :', this.store.select(selectMoviesList));
+    this.store.select(selectMoviesList).subscribe(r => console.log('r ', r));
 
   }
 
