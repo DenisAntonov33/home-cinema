@@ -18,22 +18,12 @@ export class CinemaComponent implements OnInit {
 
   constructor(private store: Store<IAppState>) {
     this.movies$ = this.store.pipe(select(selectMoviesList));
-    console.log('this.movies$ :', this.movies$);
-    this.store.select(selectMoviesList).subscribe(r => console.log('r ', r));
+    this.store.select(selectMoviesList).subscribe();
 
   }
-
-  // movies$: Observable<IMovieItem[]> = this.store.select(selectMoviesList);
 
   ngOnInit() {
     this.store.dispatch(new GetMovies());
-  }
-
-  test() {
-    console.log('this.movie :', this.movies$);
-    console.log('getInitialState :', getInitialState());
-    // console.log('select(selectMoviesList) :', select(selectMoviesList));
-    console.log('this.store.pipe(select(selectMoviesList)) :', this.store.pipe(select(selectMoviesList)));
   }
 
 }

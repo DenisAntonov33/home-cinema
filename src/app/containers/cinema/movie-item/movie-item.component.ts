@@ -17,10 +17,6 @@ export class MovieItemComponent implements OnInit {
     return this.movieItem ? this.movieItem.release_date : '2000-01-01';
   }
 
-  test() {
-    console.log('this.movieItem :', this.movieItem);
-  }
-
   ngOnInit() {
   }
 

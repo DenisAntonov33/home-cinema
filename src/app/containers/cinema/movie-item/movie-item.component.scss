@@ -39,8 +39,16 @@
     padding-right: 25px; 
   }
   &__rating {
-    background-color: pink;
+    align-items: center;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    font-weight: bold;
     height: 38px;
+    justify-content: center;
+    line-height: 20px;
+    text-align: center;
     width: 38px;
   }
   &__title-wrapper {

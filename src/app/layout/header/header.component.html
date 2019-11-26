@@ -45,7 +45,7 @@
             <li class="nav-item">
               <a routerLink="/announce" class="nav-link">Sign Up</a>
             </li>
-            <li *ngIf="auth.token"  class="nav-item nav-item_personal">
+            <li *ngIf="auth.token" class="nav-item nav-item_personal">
               <a routerLink="/personal" class="nav-link nav-link_personal">u</a>
             </li>
           </ul>
@@ -54,8 +54,6 @@
     </div>
   </div>
   <div class="header-search">
-    <div class="container">
-      <app-search></app-search>
-    </div>
+    <app-search></app-search>
   </div>
 </header>

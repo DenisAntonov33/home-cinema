@@ -1,3 +1,19 @@
-<div class="search">
-  <input class="search__input" type="text" placeholder="Search for a movie, TV show, person..." />
+<div class="search" appClickOutside (appClickOutside)="clearResults()">
+  <div class="search-wrapper">
+    <div class="container">
+      <input
+        [(ngModel)]="searchedText"
+        class="search__input"
+        type="text"
+        #ctrl="ngModel"
+        #searchInput
+        placeholder="Search for a movie, TV show, person..."
+      />
+    </div>
+  </div>
+  <div class="search-result">
+    <div *ngFor="let searchResult of results" class="search-result__item">
+      <div class="container">{{ searchResult.name }}</div>
+    </div>
+  </div>
 </div>

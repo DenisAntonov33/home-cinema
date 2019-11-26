@@ -25,6 +25,9 @@ import { environment } from './../environments/environment';
 import { AuthComponent } from './containers/auth/auth.component';
 import { PersonalComponent } from './containers/personal/personal.component';
 
+import { FormsModule } from '@angular/forms';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { PersonalComponent } from './containers/personal/personal.component';
     SearchComponent,
     MovieItemComponent,
     AuthComponent,
-    PersonalComponent
+    PersonalComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { PersonalComponent } from './containers/personal/personal.component';
     StoreModule.forRoot(appReducers),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([MoviesEffects])
+    EffectsModule.forRoot([MoviesEffects]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,11 @@
 .search {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 47px;
   position: relative;
   &::before {
     content: '';
-    font-family: "Glyphicons Regular";
+    font-family: 'Glyphicons Regular';
     height: 20px;
     left: 0;
     top: 0;
@@ -19,5 +19,24 @@
     &:focus {
       outline: none;
     }
+  }
+}
+
+.search-wrapper {
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.search-result {
+  background-color: #fff;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  width: 100%;
+  &__item {
+    border-bottom: 1px solid #dedede;
   }
 }

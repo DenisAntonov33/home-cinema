@@ -11,15 +11,22 @@
 
   <div class="movie-item__info">
     <div class="movie-item__header">
-      <div class="rating movie-item__rating"></div>
+      <div class="rating movie-item__rating">
+        <span>{{ movieItem.vote_average * 10 }}</span>
+      </div>
       <div class="movie-item__title-wrapper">
         <a routerLink="/cinema" class="movie-item__title">{{ movieItem.title }}</a>
-        <span (click)='test()' class="movie-item__date">{{releaseDate() | date:'longDate'}}</span>
+        <span (click)="test()" class="movie-item__date">
+          {{ releaseDate() | date: 'longDate' }}</span
+        >
       </div>
     </div>
     <div class="movie-item__body">
-      During the 1980s, a failed stand-up comedian is driven insane and turns to a life of
-      crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.
+      <span>{{
+        movieItem.overview.length > 250
+          ? (movieItem.overview | slice: 0:250) + '..'
+          : movieItem.overview
+      }}</span>
     </div>
     <div class="movie-item__footer">
       <a routerLink="/cinema" class="movie-item__link">More Info</a>
