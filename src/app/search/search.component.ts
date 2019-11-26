@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
 })
 export class SearchComponent implements AfterViewInit {
 
-  @ViewChild('searchInput') input: ElementRef;
+  @ViewChild('searchInput', { static: true }) input: ElementRef;
 
   constructor(private api: ApiService) { }
 
