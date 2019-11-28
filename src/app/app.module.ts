@@ -27,6 +27,7 @@ import { PersonalComponent } from './containers/personal/personal.component';
 
 import { FormsModule } from '@angular/forms';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { MoviePageComponent } from './containers/movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ClickOutsideDirective } from './directives/click-outside.directive';
     MovieItemComponent,
     AuthComponent,
     PersonalComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,

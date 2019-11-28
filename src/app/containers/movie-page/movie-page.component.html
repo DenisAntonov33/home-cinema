@@ -1,0 +1,30 @@
+<div class="movie-page">
+  <section class="poster">
+    <div class="poster__bg" [ngStyle]="{backgroundImage: 'url(https://image.tmdb.org/t/p/w1400_and_h450_face/' + movie.backdrop_path + ')'}"></div>
+      <div class="poster__container container">
+        <div class="row">
+          <div class="col-4">
+            <img
+              *ngIf="movie"
+              [src]="
+                'https://image.tmdb.org/t/p/w185_and_h278_bestv2/' + movie.poster_path"
+              alt=""
+              class="poster__img"
+            />
+          </div>
+          <div class="col-8">
+            <div class="poster__title">
+              <h2 class="poster__title-name">{{ movie.title }}</h2>
+              <span class="poster__title-date"
+                >({{ movie.release_date | date: 'yyyy' }})</span
+              >
+            </div>
+            <div class="poster__overview">
+              <h3 class="poster__overview-title">Overvirew</h3>
+              {{ movie.overview }}
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>

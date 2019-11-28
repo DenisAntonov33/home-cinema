@@ -1,6 +1,6 @@
 <div class="movie-item">
   <div class="movie-item__img-wrapper">
-    <a routerLink="/cinema" class="movie-item__img-link">
+    <a [routerLink]="'/movie/' + movieItem.id" class="movie-item__img-link">
       <img
         [src]="'https://image.tmdb.org/t/p/w185_and_h278_bestv2/' + movieItem.poster_path"
         alt=""
@@ -15,10 +15,10 @@
         <span>{{ movieItem.vote_average * 10 }}</span>
       </div>
       <div class="movie-item__title-wrapper">
-        <a routerLink="/cinema" class="movie-item__title">{{ movieItem.title }}</a>
-        <span (click)="test()" class="movie-item__date">
-          {{ releaseDate() | date: 'longDate' }}</span
-        >
+        <a [routerLink]="'/movie/' + movieItem.id" class="movie-item__title">{{
+          movieItem.title
+        }}</a>
+        <span class="movie-item__date"> {{ releaseDate() | date: 'longDate' }}</span>
       </div>
     </div>
     <div class="movie-item__body">
@@ -29,7 +29,7 @@
       }}</span>
     </div>
     <div class="movie-item__footer">
-      <a routerLink="/cinema" class="movie-item__link">More Info</a>
+      <a [routerLink]="'/movie/' + movieItem.id" class="movie-item__link">More Info</a>
     </div>
   </div>
 </div>

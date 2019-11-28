@@ -1,0 +1,49 @@
+.poster {
+  color: #fff;
+  position: relative;
+  &__bg {
+    background-image: url('https://image.tmdb.org/t/p/w1400_and_h450_face/ygWKYTu7OnZKF9H5NsgjL9iURGV.jpg');
+    background-size: cover;
+    filter: opacity(100) grayscale(100%) contrast(130%);
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    &::before {
+      background-image: radial-gradient(
+        circle at 20% 50%,
+        rgba(11.76%, 18.43%, 23.53%, 0.98) 0%,
+        rgba(18.82%, 25.49%, 30.59%, 0.88) 100%
+      );
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__container {
+    min-height: 530px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    &-name {
+      color: #fff;
+      display: inline;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    &-date {
+      font-size: 1.7rem;
+      color: transparentize(#fff, 0.4);
+    }
+  }
+  &__img {
+    height: 450px;
+    width: 300px;
+  }
+}

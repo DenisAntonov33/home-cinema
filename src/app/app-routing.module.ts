@@ -6,12 +6,14 @@ import { HomeComponent } from './containers/home/home.component';
 import { CinemaComponent } from './containers/cinema/cinema.component';
 import { AuthComponent } from './containers/auth/auth.component';
 import { PersonalComponent } from './containers/personal/personal.component';
+import { MoviePageComponent } from './containers/movie-page/movie-page.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'announce', component: AnnounceComponent },
   { path: 'movie', component: CinemaComponent },
+  { path: 'movie/:id', component: MoviePageComponent },
   { path: 'login', component: AuthComponent },
   { path: 'personal', canActivate: [AuthGuardService], component: PersonalComponent },
   { path: '**', component: NotFoundComponent },

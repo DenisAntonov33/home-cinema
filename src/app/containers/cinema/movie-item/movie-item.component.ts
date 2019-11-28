@@ -12,7 +12,6 @@ export class MovieItemComponent implements OnInit {
 
   @Input() movieItem: IMovieItem;
 
-  // protected releaseDate = this.movieItem ? new Date(this.movieItem.release_date) : new Date();
   protected releaseDate() {
     return this.movieItem ? this.movieItem.release_date : '2000-01-01';
   }
